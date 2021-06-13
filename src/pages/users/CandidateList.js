@@ -26,7 +26,7 @@ function CandidateList() {
                    <Table.Row key={candidate.id}>
                        <Table.Cell>
                             <Header as='h4' image>
-                                <Image src={candidate.url} rounded size='mini'>{candidate.url}</Image>
+                                <Image src={candidate.url} rounded size='large'>{candidate.url}</Image>
                                 <Header.Content>
                                      {candidate.firstName} {candidate.lastName}
                                </Header.Content>

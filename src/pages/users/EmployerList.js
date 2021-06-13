@@ -29,7 +29,7 @@ function CandidateList() {
                    <Table.Row key={employer.id}>
                        <Table.Cell>
                             <Header as='h4' image>
-                                <Image src={employer.url} rounded size='mini'></Image>
+                                <Image src={employer.url} rounded size='large'></Image>
                                 <Header.Content>
                                      {employer.companyName} 
                                </Header.Content>

@@ -26,7 +26,7 @@ function EmployeeList() {
                    <Table.Row key={employee.id}>
                        <Table.Cell>
                             <Header as='h4' image>
-                                <Image src={employee.url} rounded size='mini'></Image>
+                                <Image src={employee.url} rounded size='large'></Image>
                                 <Header.Content>
                                      {employee.firstName} {employee.lastName}
                                </Header.Content>

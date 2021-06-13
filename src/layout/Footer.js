@@ -1,41 +1,48 @@
 import React from 'react'
-import { Grid, GridColumn ,Icon } from "semantic-ui-react";
+import {
+    Container,
+    Divider,
+    Grid,
+    Header,
+    Image,
+    List,
+    Segment,
+  } from 'semantic-ui-react';
 
 function Footer() {
     return (
         <div className="footer">
-            <Grid>
-                <Grid.Row>
-                <GridColumn size={5}>
-                <p class="mb-1"> &copy; 2021 Büşra Bulut</p>
-                 <ul class="list-inline">
-                      <li class="list-inline-item"><a href="https://github.com/busrablt/hrms">Frontend</a></li>
-                      <li class="list-inline-item"><a href="https://github.com/busrablt/hrms-frontend">Backend</a></li>
-                      <li class="list-inline-item"><a href="#">Hakkımızda</a></li>
-                      <li class="list-inline-item"><a href="#">Destek</a></li>
-                  </ul>
-                </GridColumn>
-                <GridColumn size={11}>
-
-                 <ul class="list-inline">
-                      <li class="list-inline-item">
-                          <Icon name="linkedin " />
-                      </li>
-                     <li class="list-inline-item">
-                          <Icon name="github square" />
-                    </li>
-                    <li class="list-inline-item">
-                          <Icon name="twitter square" />
-                    </li>  
-                    <li class="list-inline-item">
-                          <Icon name="facebook square" />
-                    </li>  
-                  </ul>
-
-                </GridColumn >
-               
-                </Grid.Row>
+        <Segment inverted style={{ margin: '5em 0em 0em', padding: '5em 0em' }} vertical>
+          <Container textAlign='center'>
+            <Grid columns={1} divided stackable inverted>
+              <Grid.Row>
+                <Grid.Column>
+                  <Header inverted as='h4' content='Footer Header' />
+                  <p>
+                    Extra space for a call to action inside the footer that could help re-engage
+                    users.
+                  </p>
+                </Grid.Column>
+              </Grid.Row>
             </Grid>
+            <Divider inverted section />
+            <Image src='#' centered size='mini' />
+            <List horizontal inverted divided link size='small'>
+              <List.Item as='a' href='#'>
+                Site Map
+              </List.Item>
+              <List.Item as='a' href='#'>
+                Contact Us
+              </List.Item>
+              <List.Item as='a' href='#'>
+                Terms and Conditions
+              </List.Item>
+              <List.Item as='a' href='#'>
+                Privacy Policy
+              </List.Item>
+            </List>
+          </Container>
+        </Segment>
             
         </div>
     )
