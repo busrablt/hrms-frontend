@@ -1,5 +1,5 @@
 import React from 'react'
-import { Header, Image, Table } from 'semantic-ui-react'
+import { Header, Image, Table, Icon } from 'semantic-ui-react'
 import { useState, useEffect } from "react";
 import EmployeeService from '../../services/employeeService';
 
@@ -13,7 +13,11 @@ function EmployeeList() {
 
     return (
         <div>
-            <Table basic='very' celled collapsing>
+             <Header as="h2">
+                 <Icon name="unordered list" />
+                 <Header.Content>Employee List</Header.Content>
+             </Header>
+            <Table color="purple" >
                  <Table.Header>
                      <Table.Row>
                          <Table.HeaderCell>Employee</Table.HeaderCell>
@@ -21,6 +25,7 @@ function EmployeeList() {
                          <Table.HeaderCell>Email</Table.HeaderCell>
                     </Table.Row>
                 </Table.Header>
+
                 <Table.Body>
                {employees.map((employee)=>(
                    <Table.Row key={employee.id}>

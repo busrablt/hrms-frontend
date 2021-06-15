@@ -1,5 +1,5 @@
 import React from 'react'
-import { Header, Image, Table,Button } from 'semantic-ui-react'
+import { Header, Image, Table,Button, Icon } from 'semantic-ui-react'
 import { useState, useEffect } from "react";
 import CandidateService from '../../services/candidateService';
 
@@ -13,7 +13,11 @@ function CandidateList() {
 
     return (
         <div>
-            <Table basic='very' celled collapsing>
+            <Header as="h2">
+                 <Icon name="unordered list" />
+                 <Header.Content>Candidate List</Header.Content>
+             </Header>
+            <Table color="purple" >
                  <Table.Header>
                      <Table.Row>
                          <Table.HeaderCell>Candidate</Table.HeaderCell>
