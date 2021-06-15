@@ -1,7 +1,22 @@
 import React from 'react'
-import { Button,Container, Menu, Image } from 'semantic-ui-react'
+import { Container, Menu, Image } from 'semantic-ui-react'
+import  {useState} from "react";
+import { useHistory } from "react-router";
 import Language from './Language'
+import SignedOut from './SignedOut'
+import SignedIn from './SignedIn';
+
 function Navi() {
+    const [isAuthenticated, setIsAuthenticated] = useState(true)
+    const history = useHistory()
+    function handleSignOut() {
+        setIsAuthenticated(false)
+        history.push("/")
+      }
+    
+      function handleSignIn() {
+        setIsAuthenticated(true)
+      }
     return (
         <div>
             <Menu inverted fixed= "top">
@@ -13,10 +28,8 @@ function Navi() {
                    <Menu.Item name='messages'/>
                    <Menu.Menu position='right'>
                        <Language/>
-                    <Menu.Item>
-                        <Button primary>Sign Up</Button>
-                        <Button primary>Login</Button>
-                    </Menu.Item>
+                       {isAuthenticated?<SignedIn signOut={handleSignOut} />
+                       :<SignedOut signIn={handleSignIn}/>} 
                    </Menu.Menu>
                 </Container>
             </Menu>      
