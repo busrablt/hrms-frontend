@@ -6,6 +6,8 @@ import EmployerList from "../pages/users/EmployerList"
 import EmployeeList from "../pages/users/EmployeeList"
 import CandidateList from "../pages/users/CandidateList"
 import JobAdvertList from "../pages/adverts/JobAdvertList"
+import JobAdvertForm from "../pages/formik/JobAdvertForm";
+import CandidateCv from "../pages/users/CandidateCv";
 
 
 function Dashboard() {
@@ -21,7 +23,9 @@ function Dashboard() {
                             <Route exact path="/employers" component={EmployerList} />
                             <Route exact path="/employees" component={EmployeeList} />
                             <Route exact path="/candidates" component={CandidateList} />
+                            <Route exact path="/candidateCv" component={CandidateCv} />
                             <Route exact path="/jobAdverts" component={JobAdvertList} />
+                            <Route exact path="/addJobAdvert" component={JobAdvertForm}/>
                          </Grid.Column>
                  </Grid.Row>
              </Grid>
