@@ -1,6 +1,7 @@
 import React from 'react'
 import { Header, Image, Table,Button, Icon } from 'semantic-ui-react'
 import { useState, useEffect } from "react";
+import {  NavLink } from 'react-router-dom';
 import CandidateService from '../../services/candidateService';
 
 function CandidateList() {
@@ -22,6 +23,7 @@ function CandidateList() {
                      <Table.Row>
                          <Table.HeaderCell>Candidate</Table.HeaderCell>
                          <Table.HeaderCell> Mail</Table.HeaderCell>
+                         <Table.HeaderCell> Phone Number</Table.HeaderCell>
                          <Table.HeaderCell> Detail</Table.HeaderCell>
                     </Table.Row>
                 </Table.Header>
@@ -30,14 +32,15 @@ function CandidateList() {
                    <Table.Row key={candidate.id}>
                        <Table.Cell>
                             <Header as='h4' image>
-                                <Image src={candidate.url} rounded size='large'>{candidate.url}</Image>
+                                <Image src={candidate.url} rounded size='large'/>
                                 <Header.Content>
                                      {candidate.firstName} {candidate.lastName}
                                </Header.Content>
                             </Header>
                         </Table.Cell>
                         <Table.Cell>{candidate.email}</Table.Cell>
-                        <Table.Cell><Button>View</Button></Table.Cell>
+                        <Table.Cell>{candidate.phoneNumber}</Table.Cell>
+                        <Table.Cell><Button as={NavLink} to="/candidateCv">View</Button></Table.Cell>
                    </Table.Row>
                ))}
                </Table.Body>

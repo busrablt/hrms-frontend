@@ -28,7 +28,7 @@ function JobAdvertList() {
                 <Table.Body>
                     {jobAdverts.map((jobAdvert)=>(
                    <Table.Row key={jobAdvert.id}>
-                        <Table.Cell>{jobAdvert.employer.CompanyName}</Table.Cell>
+                        <Table.Cell>{jobAdvert.employer.companyName}</Table.Cell>
                         <Table.Cell>{jobAdvert.jobPosition.position}</Table.Cell>
                         <Table.Cell>{jobAdvert.city.cityName}</Table.Cell>
                         <Table.Cell><Button>View</Button></Table.Cell>

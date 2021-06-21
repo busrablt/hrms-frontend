@@ -26,7 +26,7 @@ function Footer() {
               </Grid.Row>
             </Grid>
             <Divider inverted section />
-            <Image className="ui mini circular image" src='./hrms_3.jpeg'  centered size='miny' /> 
+            <Image className="ui mini circular image" src='./hrms_3.jpeg'  centered size='mini' /> 
             <List horizontal inverted divided link size='small'>
               <List.Item as='a' href='#'>
                 Site Map
